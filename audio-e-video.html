@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Audio e Video</title>
+</head>
+
+<body>
+  
+       
+        <h1>Trabalhando com multimidia no HTML</h1>
+        <hr>
+        
+        <h2>Áudio</h2>
+    <figure> 
+        <figcaption>Ouça Agora!!!!</figcaption>
+        <h3>Exemplo 1: Apenas com MP3 (nacegadores modernos)</h3>
+        <audio controls src="multimidia/judas-priest.mp3"></audio> 
+        
+        <h3>Exemplo 2: com (pelo menos) dois formatos (navehgadores antigos)</h3>
+        <audio controls> <source src="multimidia/judas-priest.mp3" type="audio/mp3">  <source src="multimidia/judas-priest.ogg" type="audio/ogg"></audio>
+        
+        <!-- se o navegador não suportar a tag <audio> daremos a opção do usuario baixar a musica -->
+            <p><a href="multimidia/judas-priest.mp3" download="ExemploDeMusica.mp3">Faça o download da musica!</a></p>
+    </figure>
+
+    <h2>Video</h2>
+
+    <h3>Exemplo 1: apenas MP4 (formato comum)</h3>
+    <video controls src="multimidia/pink-floyd.mp4"></video>
+
+    <h3>Exemplo 2: com (pelo menos) dois formatos (navehgadores antigos)</h3>
+    <video controls>
+        <source src="multimidia/pink-floyd.mp4" type="video/mp4"> <source src="multimidia/pink-floyd.webm" type="video/webm">
+    </video>
+
+    <p><a href="multimidia/pink-floyd.mp4" download="pink-floyd.mp4"> Download </a></p>
+
+</body>
+
+</html>

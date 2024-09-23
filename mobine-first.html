@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desing Resposivo</title>
+
+    <style>
+        /*Etapa 1: Regras comuns, regras de uso geral, regars que talvez não mudem mesmo em telas maiores etc */
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        html {font-size: 10px;}
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: lightblue;
+        }
+
+        span {
+            background-color: darkblue;
+            color: white;
+            padding: .5rem;
+        }
+
+        .container {
+            background-color: white;
+            width: 95vw;
+            margin: auto;
+            padding: .8rem;
+        }
+
+        figure {
+            text-align: center;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 2rem;
+        }
+
+        /* Etapa 2: Regras de uso condicional, regras definidas através de Media Queries conforme tamanho de tela necessarios/desejado.*/
+
+        /* Regra condicionais para tels a partir de 623px. Portanto, as regras cintidas aqui, funcionarão somante quando estas condições forem atendidas. 
+        
+        Obs: não ha tamanho perfeito para colocar na condição. Sempre avalie de acordo com seu conteudo e layout conforme os testes no simulador/aparelho */
+        @media screen and (min-width: 623px) {
+            body {background-color: yellow;}
+            html {font-size: 15px;}
+        }
+
+        /* Crie uma nova Media Query para telas a partir de 789px
+    que faça as seguintes alterações:
+
+    -Container: largura máxima de 700px, borda arredondada e sombra de sua preferência
+    -h1: centralizado
+    -span: mude a cor de fundo e arredonde
+    -h2: borda somente à esquerda e espaçamento interno
+    somente à esquerda
+        */
+
+        @media screen and (min-width: 789px) {
+            body {background-color: red;}
+            .container {
+                border: solid 3px red;
+                border-radius: 10px;
+                box-shadow: 10px 10px 10px;
+            }
+
+            h1 {text-align: center;}
+            span {
+                padding: 0;
+                background-color: yellow;
+                border-radius: 10px;
+            }
+            h2 {
+                border-left: solid 5px red;
+                padding: 5px;
+            }
+        }
+
+        @media print {
+            hr {display: none;}
+            span {color: black; background-color: transparent;}
+            img { filter: grayscale();}
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Media Queries - Abordagem <span>Mobile First</span></h1>
+        <hr>
+        <h2>Conceitos</h2>
+        <p>São regras especiais em que criamos alterações na página de acordo com <b>determinadas condições</b>.</p>
+        <p>Também são conhecidas como <b>breakpoints</b> (pontos de adaptação)</p>
+        <h2>Aplicação</h2>
+        <p>Media Queries são aplicadas de acordo com a estratégia usada para design responsivo.</p>
+
+        <ul>
+            <li><b>Mobile First:</b> telas pequenas para grandes</li>
+            <li>Desktop First: telas grandes para pequenas</li>
+        </ul>
+
+        <figure>
+            <img src="imagens/front-end.jpg" alt="">
+            <figcaption>Desing Resposivo</figcaption>
+        </figure>
+    </div>
+</body>
+
+</html>

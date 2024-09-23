@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variáveis</title>
+
+
+    <style>
+
+        /* variavel css */
+        :root {
+            /* sintaxe:
+            --nome: valor;*/
+
+            --cor: red;
+            --fonte: georgia;
+            --sombraTexto: red 1px 1px 5px;
+            --espaçamentoInterno: 4px;
+            --bordaDestaque: dashed 2px;
+        }
+
+        h1 {
+            text-shadow: var(--sombraTexto);
+            color: var(--cor) /* var(nome) para aplicar o valor escolhido para essa variavel*/
+        }
+
+        h2 {
+            border: solid var(--cor) 2px;
+            font-family: var(--fonte);
+            padding: var(--espaçamentoInterno);
+        }
+
+        p {
+            border: var(--bordaDestaque) red;
+            font-family: var(--fonte);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Usando variáveis no css</h1>
+    <hr>
+
+    <h2>Front-end</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, hic quia necessitatibus voluptatum laborum
+        pariatur impedit non quod recusandae ea, corrupti fugit, quisquam ducimus! Veritatis, ipsa. Ex error suscipit
+        placeat?</p>
+
+    <h2>Back-end</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, hic quia necessitatibus voluptatum laborum
+        pariatur impedit non quod recusandae ea, corrupti fugit, quisquam ducimus! Veritatis, ipsa. Ex error suscipit
+        placeat?</p>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        /* adicionamos o ::after e o ::before para garantir a mudança no box-model tambem para qualquer espaço/conteudo criado dentro das tags (tanto depois quanta antes de cada conteudo) */
+        *, *::after, *::before { box-sizing: border-box;}
+
+        body {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+        .container {
+            border:  solid 1px;
+            padding: 4px 0px 0px;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            background-color: black;
+
+            /* "quebra" o container caso não tenha espaço pra layout lado a lado */
+            flex-wrap: wrap;
+            
+            /*Habilitando o Flexbox*/
+            display: flex;
+
+            /* Eixo/Axis do Flexbox
+            Direção ROW/LINHA (padrão) ou direção COLUMN/COLUNA */
+            flex-direction: row;
+            
+            /* para alinhar e distribuir o espaço entre os itens flexíveis ao longo do eixo principal */
+            justify-content: space-evenly;
+
+            /* alinhar os itens */
+            align-items: center;
+
+            /* lacuna entre elementos */
+            gap: 10px ;
+        }
+
+        img { width: 100%;}
+
+        article {
+            background-color: white;
+            width: 30%;
+            padding: 2px;
+            /* margin-bottom: 10px; */
+
+            h2 {font-size: 18px;}
+            p {font-size: 14px;}
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com Flexbox</h1>
+    <hr>
+
+    <p>Flexbox é um mecanismo que permite aplicar facilmente recursos de alinhamento, espaçamento e distribuição de
+        elementos na página. Muito util na elaboração de layouts comuns, baseados em linhas e colunas.</p>
+
+    <div class="container">
+        <article>
+            <img src="imagens/mini-apple.jpg" alt="">
+            <h2>Apple</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-ibm.jpg" alt="">
+            <h2>IBM</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-microsoft.jpg" alt="">
+            <h2>Microsoft</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+
+        <article>
+            <img src="imagens/mini-apple.jpg" alt="">
+            <h2>Apple</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-ibm.jpg" alt="">
+            <h2>IBM</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-microsoft.jpg" alt="">
+            <h2>Microsoft</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+
+        <article>
+            <img src="imagens/mini-apple.jpg" alt="">
+            <h2>Apple</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-ibm.jpg" alt="">
+            <h2>IBM</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+
+        <article>
+            <img src="imagens/mini-microsoft.jpg" alt="">
+            <h2>Microsoft</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, ad.</p>
+        </article>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS nesting</title>
+
+    <style>
+        .conteudo {
+            background-color: orange;
+            padding: 1%;
+
+            .produto {
+                border: solid 2px;
+                margin: 10px;
+
+                h3 {
+                    text-transform: uppercase;
+                    color: red;
+                }
+            }
+        }
+
+        .container {
+            background-color: lightblue;
+            margin: auto;
+            width: 80%;
+            padding: 1%;
+
+            .topo {
+                background-color: yellow;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: black;
+
+                    /*  & nesting selector */
+                    &:hover {color: red;}
+                }
+            }
+        }
+
+
+        /*.container .topo {
+           background-color: yellow;
+            text-align: center;
+         } */
+    </style>
+</head>
+
+<body>
+
+    <h1>Aninhamentos em regras CSS</h1>
+    <p><i></i></p>
+    <hr>
+
+    <div class="container">
+        <header class="topo">
+            <h2>Exemplo</h2>
+            <nav>
+                <a href="">link 1</a>
+                <a href="">link 2</a>
+            </nav>
+        </header>
+
+        <main class="conteudo">
+            <article class="produto">
+                <h3>Teste 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est mollitia optio, omnis eum similique
+                    commodi et officia repellat inventore dolorum tenetur sint obcaecati necessitatibus nostrum alias
+                    minus! Sequi, iste minus?</p>
+            </article>
+            <article class="produto">
+                <h3>Teste 1</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem harum reprehenderit exercitationem
+                    cupiditate quasi fugiat aliquid at. Saepe aliquid explicabo eligendi cupiditate fugiat alias
+                    perferendis molestias porro repudiandae hic? Alias.</p>
+            </article>
+        </main>
+    </div>
+
+</body>
+
+</html>
